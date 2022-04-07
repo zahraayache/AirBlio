@@ -1,0 +1,231 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://www.leviia.com/wp-content/themes/leviia/style-min.css">
+    <link rel="icon" href="../images\fav_icon.jpeg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.bootcss.com/flag-icon-css/2.8.0/css/flag-icon.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function() {
+
+            //scrolling menu bar
+            $(function() {
+                $(document).scroll(function() {
+                    var $nav = $("#topnav");
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                });
+
+
+            });
+
+            //fade in logo
+            $('.logo').addClass('show');
+            $('.description p').addClass('show');
+            $('.products_images img').addClass('show');
+            if ($(this).scrollTop > $('.logo').scrollTop) {
+                $('.logo').addClass('show');
+            }
+
+        });
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop > $('.logo').scrollTop) {
+                $('.logo').addClass('show');
+            }
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Les nuages survolant -->
+    <div class="photobig parallax-page" style="z-index:0;" data-parallax="scroll" data-position="center" data-image-src="https://www.leviia.com/assets/output_image-1920x650.jpg">
+        <div class="layer"></div>
+        <div class="fullscreen-bg">
+            <video autoplay="" loop="" muted="" poster="" id="vid" class="fullscreen-bg__video" playsinline="" preload="metadata">
+                        <source src="https://www.leviia.com/assets/clouds-small.mp4" type="video/mp4">
+                    </video>
+        </div>
+    </div>
+    <!-- menu bar -->
+    <div id="topnav">
+        <a href="#Mise_a_jour">Commande</a>
+        <a href="#Interventions">Interventions</a>
+        <a href="#Facture">Facture</a>
+        <a href="#Support">Support</a>
+        <svg id="profile" width="68" height="69" viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M34 0C49.0601 0 61.2 12.3185 61.2 27.6C61.2 42.8815 49.0601 55.2 34 55.2C18.94 55.2 6.80005 42.8815 6.80005 27.6C6.80005 12.3185 18.94 0 34 0ZM34 10.6033C38.9175 10.6033 42.9129 14.6575 42.9129 19.6473C42.9129 24.637 38.9175 28.5352 34 28.5352C29.0826 28.5352 25.0872 24.637 25.0872 19.6473C25.0872 14.6575 29.0826 10.6033 34 10.6033ZM16.4813 43.193C20.4767 36.7998 26.931 32.5897 34 32.5897C41.2228 32.5897 47.5233 36.7998 51.6723 43.193C47.2158 48.3387 40.7612 51.3017 34 51.3017C27.2389 51.3017 20.7838 48.3391 16.4813 43.193Z" fill="white"/>
+            </svg>
+    </div>
+    <img class="logo" src="../Images/logo.png" />
+    <div class="description">
+        <p class="paragraphe1">Propose des équipements haut de gamme pour les plongées en mer et l’accompagnement des entreprises</p>
+        <p class="paragraphe2">Nos équipes techniques interviennent auprès des clients, que ce soit pour l’installation de matériel ou pour la maintenance et les évolutions des matériels. </p>
+    </div>
+    <div class="products_images">
+        <img id="product1" src="../Images/product1.jpeg" />
+        <img id="product2" src="../Images/product2.jpeg" />
+    </div>
+
+    <div class="arrow-left"></div>
+    <div class="partie_2">
+        <p><label>Vos Objets Connectés</label></p>
+        <img src="../Images/objet connectes.jpeg" />
+        <p id="description">Les objets connectés de AIR Blio sont des technologies high tec instalés sur vos machines et qui vous indiquent si elles ont besoins d’une mise a jour</p>
+    </div>
+    <!-- table -->
+    <div class="partie_3">
+        <table class="table" id="objet_connecte">
+            <thead>
+                <tr>
+                    <th scope="col">Object Connectés</th>
+                    <th scope="col">Machines</th>
+                    <th scope="col">Date d'installation</th>
+                    <th scope="col">Besoin de mise a jour</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Airbodul</th>
+                    <td>AirBlioSonnar</td>
+                    <td>11-10-2020</td>
+                    <td>Non</td>
+                </tr>
+                <tr>
+                    <th scope="row">AirScanaire</th>
+                    <td>AirBlioScanner</td>
+                    <td>15-09-2021</td>
+                    <td>Oui <input class="demande-MAJ" type="botton" value="Demande MAJ" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">Airbodul</th>
+                    <td>AirBlioSoudure</td>
+                    <td>03-07-2019</td>
+                    <td>Oui <input class="demande-MAJ" type="botton" value="Demande MAJ" /></td>
+                </tr>
+                <tr>
+                    <th scope="row">Airbodul</th>
+                    <td>AirBlioMicroscope</td>
+                    <td>10-09-2020</td>
+                    <td>Non</td>
+                </tr>
+                <tr>
+                    <th scope="row">Airbodul</th>
+                    <td>AirBlioSoudure</td>
+                    <td>03-07-2019</td>
+                    <td>Non</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="4" style="float:right; padding-right:50px;color:gray"> 1-5 of 18
+                        <>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+    <div class="partie_4">
+        <div class="nvx_offre">
+
+            <label>Nouvelle machine ? <br>Achetez plus d’objets connectés</label>
+            <input type="button" value="Voir les offres" id="voir_les_offre" />
+        </div>
+    </div>
+    <div class="arrow-left" style="background-image: linear-gradient(to left top, #EFF0F4 0%, #EFF0F4 50%, transparent 50%);"></div>
+    <div class="partie_5">
+        <div id="text_partie_5">
+            <label style="width: 758px;font-weight: 700;
+            font-size: 30px;
+            line-height: 38px;
+            letter-spacing: 0.2px;">Toujours disponible quand vous en avez besoin.</label> <br><br>
+            <label style="width: 758px;font-weight: 700;
+            font-size: 25px;
+            line-height: 38px;
+            letter-spacing: 0.2px;">Toutes vos données sont répliquées sur nos sites en France <i class="flag-icon flag-icon-fr"> </i>        et maintenant au nivau international des sauvegardes sont réalisées chaque soir.</label> <br><br>
+            <label style="width: 758px;font-weight: 700;
+            font-size: 18px;
+            line-height: 38px;
+            letter-spacing: 0.2px;">Soyez tranquille, on s’occupe de tout !</label>
+        </div>
+        <div>
+            <img src="../Images/word map.jpeg" id="word_map" />
+        </div>
+
+
+    </div>
+    <div class="arrow-left" style="background-image:linear-gradient(to left bottom, #EFF0F4 0%, #EFF0F4 50%, transparent 50%);"></div>
+
+    <div class="partie_6">
+        <label style="position: relative;
+        font-family: 'Mulish';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38px;
+        letter-spacing: 0.6px;">Contactez-nous.</label> <br><br>
+        <label style="font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 31px;
+        letter-spacing: 0.6px;">Une question ou un commentaire ? Contactez-nous via ce formulaire.<br>
+        Nous serons ravis d’échanger avec vous.</label><br><br>
+        <label style="font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0.6px;">Pour toute demande de support technique, rendez-vous sur cette page dédiée.</label>
+
+
+    </div>
+    <div class="partie_7">
+        <div class="box">
+            <label>Prénom</label><br>
+            <input type="text" placeholder="Renseignez votre prénom" />
+        </div>
+        <div class="box">
+            <label>Nom</label><br>
+            <input type="text" placeholder="Renseignez votre Nom" />
+        </div>
+        <div class="box">
+            <label>Email</label><br>
+            <input type="text" placeholder="Renseignez votre adresse Email" />
+        </div>
+        <div class="box">
+            <label>Téléphone</label><br>
+            <input type="text" placeholder="Renseignez votre Téléphone" />
+        </div>
+        <div class="lastbox">
+            <label>Message</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="Renseignez votre Message " cols="33"></textarea>
+        </div>
+
+
+    </div>
+    <div class="arrow-left" style="top: 300px;background-image: linear-gradient(to left top, #848484 0%, #848484 50%, transparent 50%);"></div>
+    <div class="footer" style="
+    justify-content: center;">
+        <img src="../Images/logo.png" />
+        <label>Conditions générales de vente - Politique de confidentialité - Mentions Légales</label><br>
+        <label>© 2022 AIR Blio | Site by Dauphine MIDO</label>
+
+
+
+
+    </div>
+</body>
+
+</html>
