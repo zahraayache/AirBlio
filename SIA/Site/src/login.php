@@ -1,3 +1,9 @@
+<?php
+session_start();
+    unset($_SESSION['userId']);
+    unset($_SESSION['username']);
+?>
+
 <html>
     <head>
         <title>AirBlio</title>
@@ -25,14 +31,14 @@
                     </label>
                     <br>
 
-                    <input type="text" placeholder="john.doe@gmail.com" class="textbox"/>
+                    <input id="email" type="text" placeholder="john.doe@gmail.com" class="textbox"/>
                     <br>
 
                     <label class="identifiant">
                         Mot de passe :
                     </label>
                     <br>
-                    <input type="password" placeholder="*******" class="textbox"/>
+                    <input id="password" type="password" placeholder="*******" class="textbox"/>
                     <br>
 
                     <input type="checkbox" checked="checked"> 
@@ -43,7 +49,8 @@
                     
                     <br>
                     <br>
-                    <input type="button" class="connecter" value="Se connecter" style="background-color: #2C5282;">
+                    <input type="button" class="connecter" value="Se connecter" style="background-color: #2C5282;" onclick="loginFunction()">
+
                     <br>
                     <input type="button" class="connecter" value="Se connecter sans compte" style="  background-color: #CECECE;">
                     <br>
@@ -63,5 +70,41 @@
                 </p>
             </div>
         </div>
+        <script>
+            function loginFunction() {	 
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var credentials = {
+                    "email" : email,
+                    "password" : password
+                }
+                
+                var xhr = new XMLHttpRequest();
+                
+                xhr.open('POST', "http://localhost/SIA/Site/Apis/loginApi.php");
+                                
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                                
+                xhr.send("email=" + email + "&password=" + password);
+                
+                xhr.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200){
+                        var data=JSON.parse(xhr.responseText); 
+                        console.log(data.employee);
+                        alert(data.employee);
+                            if(data.employee != ""){
+                                if(data.employee[0].role == 4){
+                                    window.location.href = "http://localhost/HayaiWebsite/4-Operator/ViewItems.php"
+                                } else{
+                                    window.location.href = "http://localhost/SIA/Site/src/Client.php"
+                                }
+                            } else{
+                                alert("No such user found!");
+                                document.getElementById("email").focus();
+                            }
+                        }	
+                    }		
+            } 
+        </script>
     </body>
 </html>
