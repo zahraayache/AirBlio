@@ -516,7 +516,8 @@ a {
     color: white;
     text-decoration: underline;
 }
-.left {
+
+.emp_left {
     margin-left: 10px;
     position: relative;
     float: left;
@@ -524,12 +525,12 @@ a {
 }
 
 
-.middle {
+.emp_middle {
     position: relative;
     display: inline-block;
 }
 
-.right {
+.emp_right {
     margin-right: 10px;
     position: relative;
     float: right;
@@ -542,25 +543,6 @@ a {
     left: 10%;
     border: 2px solid #000000;
     box-sizing: border-box;
-    border-radius: 10px;
-}
-
-.sub-frame1 {
-    position: absolute;
-    width: 90%;
-    height: 100%;
-    background: #F8F8F8;
-    border-radius: 10px;
-}
-
-.sub-frame2 {
-    position: absolute;
-    width: 1257px;
-    height: 380px;
-    left: 2px;
-    top: 380px;
-
-    background: #E7E7E7;
     border-radius: 10px;
 }
 
