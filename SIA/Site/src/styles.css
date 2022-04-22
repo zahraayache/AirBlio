@@ -1,5 +1,6 @@
 body {
     background-color: #F7F8FC !important;
+    margin: 0;
 }
 
 .login {
@@ -500,4 +501,67 @@ a {
     height: 5%;
     padding-top: 5px;
     padding-left: 10px;
+}
+
+.left {
+    margin-left: 10px;
+    position: relative;
+    float: left;
+    width: 40%;
+}
+
+
+.middle {
+    position: relative;
+    display: inline-block;
+}
+
+.right {
+    margin-right: 10px;
+    position: relative;
+    float: right;
+}
+
+.frame {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.sub-frame1 {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background: #F8F8F8;
+    border-radius: 10px;
+}
+
+.sub-frame2 {
+    position: absolute;
+    width: 1257px;
+    height: 380px;
+    left: 2px;
+    top: 380px;
+
+    background: #E7E7E7;
+    border-radius: 10px;
+}
+
+.sub-frame {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    border-radius: 10px;
+}
+
+#sub1 {
+    background-color: #F8F8F8;
+}
+
+#sub2 {
+    background-color: #E7E7E7;
 }
