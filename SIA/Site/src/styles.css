@@ -28,42 +28,52 @@ body {
 }
 
 #fill2 img {
-    width: 70%;
-    padding-top: 50px;
+    width: 60%;
+    padding-top: 40px;
     display: block;
     margin: auto;
 }
 
 #loginForm {
     width: 70%;
-    padding: 60px;
+    padding: 30px;
     display: block;
     margin: auto;
 }
 
 .identifiant {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 10px;
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 15px;
     color: #77808D;
 }
 
 .textbox {
-    margin-top: 15px;
+    margin-top: 10px;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
 }
 
 .textCheck {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 a {
     margin-right: 5px;
     color: #2C5282;
+}
+
+.connecter {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px;
+    color: white;
+    border-radius: 10px;
 }
 
 #topnav {
@@ -445,4 +455,49 @@ a {
     letter-spacing: 0.6px;
     top: -130px;
     position: relative;
+}
+
+
+/* employee */
+
+#topmenu {
+    background-color: #c4c4c4;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: right;
+}
+
+#topmenu.scrolled {
+    background-color: 102355 !important;
+    transition: background-color 200ms linear;
+}
+
+#topmenu #profile {
+    vertical-align: middle;
+    width: 5%;
+    height: 5%;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+
+/* Style the links inside the navigation bar */
+
+#topmenu a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.imgtopmenu {
+    float: left;
+    width: 5%;
+    height: 5%;
+    padding-top: 5px;
+    padding-left: 10px;
 }
