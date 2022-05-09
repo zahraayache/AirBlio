@@ -91,22 +91,21 @@ session_start();
                     if (this.readyState == 4 && this.status == 200){
                         var data=JSON.parse(xhr.responseText); 
                         console.log(data.employee);
-                        alert(data.employee.userId);
-                            if(data.employee != ""){
-                                if(data.employee[0].role == 4){
-                                    window.location.href = "http://localhost/HayaiWebsite/4-Operator/ViewItems.php"
-                                }
-                                else if(data.employee[0].role == 2){
-                                    window.location.href = "http://localhost/SIA/Site/src/employee/Indicateur.php"
-                                } else {
-                                    window.location.href = "http://localhost/SIA/Site/src/client/Client.php"
-                                }
-                            } else{
-                                alert("No such user found!");
-                                document.getElementById("email").focus();
+                        if(data.employee != ""){
+                            if(data.employee[0].role == 4){
+                                window.location.href = "http://localhost/HayaiWebsite/4-Operator/ViewItems.php"
                             }
-                        }	
-                    }		
+                            else if(data.employee[0].role == 2){
+                                window.location.href = "http://localhost/SIA/Site/src/employee/indicateur.php"
+                            } else {
+                                window.location.href = "http://localhost/SIA/Site/src/client/client.php"
+                            }
+                        } else{
+                            alert("No such user found!");
+                            document.getElementById("email").focus();
+                        }
+                    }	
+                }		
             } 
         </script>
     </body>
