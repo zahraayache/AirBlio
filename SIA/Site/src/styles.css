@@ -163,7 +163,7 @@ a {
     -webkit-transition: 1.2s ease;
     -moz-transition: 1.2s ease;
     -o-transition: 1.2s ease;
-    -ms-transition: 1s.2 ease;
+    -ms-transition: 1.2s ease;
 }
 
 .description .paragraphe1.show {
@@ -509,9 +509,7 @@ a {
     color: black;
 }
 
-
 /* Add a color to the active/current link */
-
 #topmenu a.active {
     color: white;
     text-decoration: underline;
@@ -523,7 +521,6 @@ a {
     float: left;
     width: 40%;
 }
-
 
 .emp_middle {
     position: relative;
@@ -559,4 +556,155 @@ a {
 
 #sub2 {
     background-color: #E7E7E7;
+}
+
+#textNextToImage {
+    float: right;
+}
+
+.mission-name {
+    padding-left: 180px;
+    margin-top: 50px;
+}
+
+/* Interventions */
+
+.team_pic {
+    width: 50px;
+}
+
+.intervention_orange {
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #FFDB99;
+    text-align: center;
+    font-weight: 600;
+}
+
+.intervention_jaune {
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #FFFF99;
+    text-align: center;
+    font-weight: 600;
+}
+
+.intervention_vert {
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #99CC99;
+    text-align: center;
+    font-weight: 600;
+}
+
+.intervention_rouge {
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #FF9999;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Add a color to the active/current link */
+
+#topmenu a.active {
+    color: white;
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    margin-left: -50px;
+    color: #000000 !important;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+}
+
+.dropdown-content a {
+    color: black !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    z-index: 101;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    z-index: 101;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 101;
+}
+
+.titre {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+/* employee */
+
+#topmenu {
+    background-color: #c4c4c4;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: right;
+}
+
+#topmenu.scrolled {
+    background-color: 102355;
+    transition: background-color 200ms linear;
+}
+
+#topmenu #profile {
+    padding-top: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+
+/* Style the links inside the navigation bar */
+
+#topmenu a {
+    color: #005F95;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
+    font-size: 20px;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.imgtopmenu {
+    float: left;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+
+
+/* Change the color of links on hover */
+
+#topmenu a:hover {
+    background-color: #ddd;
+    color: black;
 }
