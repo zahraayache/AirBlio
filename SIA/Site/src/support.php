@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>AirBlio</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <link rel="icon" href="../images\fav_icon.jpeg"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+	    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+    </body>
+</html>
